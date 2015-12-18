@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock | Paper | Scissors Game</title>
+
+    <script src="http://code.jquery.com/jquery-2.1.4.js" type="text/javascript"></script>
+    <script src='js/main.js' type="text/javascript"></script>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/bounce.css" rel="stylesheet" type="text/css">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rubik+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="header-container">
+        <div class="header"><p>Choose your weapon</p>
+          <div class="scoreboard-container">
+            <div class="scoreboard">
+              <p>PLAYER: </p><span id="playerScore">0</span>
+              <p>COMPUTER: </p><span id="computerScore">0</span>
+              <p>TIE: </p><span id="tieScore">0</span>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="option-container">
+
+        <div class = "option" id="rock">
+            <img src="images/rock200.svg" alt="Rock">
+        </div>
+
+
+        <div class = "option" id="paper">
+            <img src="images/paper200.svg" alt="Paper">
+        </div>
+
+
+        <div class = "option" id="scissors">
+            <img src="images/scissors200.svg" alt="Scissors">
+        </div>
+
+    </div>
+    <div class="winner">
+      <p>Let's see, can a mere mortal beat a robot?</p>
+    </div>
+
+    <div class="buttons">
+      <div class="clear-round"></div>
+      <div class="reset-score"></div>
+    </div>
+
+  </body>
+</html>
