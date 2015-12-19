@@ -3,7 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="47px" height="41.6px" viewBox="0 0 47 41.6" style="enable-background:new 0 0 47 41.6;" xml:space="preserve">
 <style type="text/css">
+<<<<<<< HEAD
 	.st0{fill:#F2EFDC;}
+=======
+	.st0{fill:#404040;}
+>>>>>>> gh-pages
 </style>
 <g id="refresh">
 	<path class="st0" d="M43.2,12.3c-0.3,0.1-0.7,0-0.8-0.3C38.9,4.6,31.7,0,23.5,0C15.2,0,7.6,5.1,4.4,12.7c-0.1,0.3,0,0.7,0.4,0.9

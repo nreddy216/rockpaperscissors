@@ -128,8 +128,59 @@ $(document).ready(function(){
 
     //CHANGES ONLY THE SCORE OF THE WINNER OF THIS ROUND
     //EVAL evaluates it as a variable, not a string
+    $("#"+winner+"Score").fadeOut('fast');
     $("#"+winner+"Score").html(eval(winner+"Score"));
+    $("#"+winner+"Score").fadeIn('slow');
 
+
+  });
+
+  $('.winner').click(function(){
+    $(".option").css({"background-color":"#fff"});
+    $(".winner").css({"color":"#404040"});
+    if((tieScore>0 || playScore>0)&&(tieScore>playerScore && tieScore>computerScore)||(playerScore===computerScore)){
+      $(".winner").html("<p>Looks like we're mostly an even match.</p>");
+    }
+    else if(playerScore > computerScore){
+      $(".winner").html("<p>Wow. You are outsmarting a computer!</p>");
+    }
+    else if(playerScore < computerScore){
+      $(".winner").html("<p>Hmm, I guess computers > humans!</p>");
+    }
+  });
+
+  //WHEN USER HOVERS, refresh btn slightly rotates. Kind of glitchy right now.
+  $('#refresh-button').hover(function(){
+    $('#refresh-button img').animate({  borderSpacing: -14}, {
+    step: function(now,fx) {
+      $(this).css('-webkit-transform','rotate('+now+'deg)');
+      $(this).css('-moz-transform','rotate('+now+'deg)');
+      $(this).css('transform','rotate('+now+'deg)');
+    },
+    duration:'slow'
+},'linear');
+  });
+
+  //WHEN USER CLICK ON REFRESH BTN, the circles from the options disappear,
+  //the scores are reset, and the message changes.
+  $('#refresh-button').click(function(){
+
+    $(".option").css({"background-color":"#fff"});
+    $(".winner").css({"color":"#404040"});
+
+    if(playerScore > 0 || computerScore > 0 || tieScore > 0){
+      playerScore = 0;
+      computerScore = 0;
+      tieScore = 0;
+
+      //CHANGES ONLY THE SCORE OF THE WINNER OF THIS ROUND
+      //EVAL evaluates it as a variable, not a string
+      $("#playerScore").html(eval(0));
+      $("#computerScore").html(eval(0));
+      $("#tieScore").html(eval(0));
+
+      $('.winner').html("<p>Great. Let's start over!</p>");
+    }
 
   });
 
